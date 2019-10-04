@@ -9,120 +9,104 @@
   </head>
   <body>
     <main>
-      <h1 id="title">This Is A Survey Form</h1>
+      <h1 id="title">Survey Form</h1>
       <form action="" method="post" id="survey-form">
-        <p id="description">A description of the subject to which this survey form applies</p>
+        <p id="description">A description of the form subject.</p>
 
-        <div>
-          <div class="left">
-            <label id="name-label"> Name:</label>
-          </div>
-          <div class="right">
+        <div class="row">
+          <section class="left">
+            <label id="name-label" for="name"> Name:</label>
+          </section>
+          <section class="right">
             <input type="text" name="name" id="name" required="required" placeholder="Enter your name" />
-          </div>
+          </section>
         </div>
 
-        <div>
-          <div class="left">
-            <label id="email-label">Email:</label>
-          </div>
-          <div class="right">
+        <div class="row">
+          <section class="left">
+            <label id="email-label" for="email">Email:</label>
+          </section>
+          <section class="right">
             <input type="email" name="email" id="email" required="required" placeholder="Enter your Email" />
-          </div>
+          </section>
         </div>
 
-        <div>
-          <div class="left">
-            <label id="number-label"> Number:</label>
-          </div>
-          <div class="right">
+        <div class="row">
+          <section class="left">
+            <label id="number-label" for="number"> Number:</label>
+          </section>
+          <section class="right">
             <input type="number" name="number" id="number" min="1" max="75" placeholder="Enter a number 1 - 75"/>
-          </div>
+          </section>
         </div>
 
-        <div>
-          <div class="left">
-            <label class="title-label">Dropdown Menu:</label>
-          </div>
-          <div class="right">
+        <div class="row">
+          <section class="left">
+            <label id="dropdown-label" for="dropdown">Dropdown Menu:</label>
+          </section>
+          <secion class="right">
             <select name="dropdown" id="dropdown" value="">
               <option disabled selected value>Select an option</option>
-              <option value="">Option 1</option>
-              <option value="">Option 2</option>
-              <option value="">Option 3</option>
-              <option value="">Option 4</option>
-              <option value="">Option 5</option>
+              <option value="one">Option 1</option>
+              <option value="two">Option 2</option>
+              <option value="three">Option 3</option>
+              <option value="four">Option 4</option>
+              <option value="five">Option 5</option>
             </select>
-          </div>
+          </section>
         </div>
 
-        <div>
-          <div class="left">
-            <label>Radio Buttons <br />(Group 1):</label>
-          </div>
-          <div class="right">
-            <input type="radio" name="group_one" value="Value 1" /><label>Value 1</label>
-            <input type="radio" name="group_one" value="Value 2" /><label>Value 2</label>
-            <input type="radio" name="group_one" value="Value 3" /><label>Value 3</label>
-          </div>
+        <div class="row">
+          <section id="radio-one" class="left">
+            <label id="radio-one-label" for="group_one">Radio Buttons (Group 1):</label>
+          </section>
+          <section class="right">
+            <input type="radio" class="radio-one" name="group_one" value="Value 1">Value 1 <br >
+            <input type="radio" class="radio-one" name="group_one" value="Value 2">Value 2 <br >
+            <input type="radio" class="radio-one" name="group_one" value="Value 3">Value 3 <br >
+          </section>
         </div>
 
-        <div>
-          <div class="left">
-            <label>Radio Buttons <br />(Group 2):</label>
-          </div>
-          <div class="right">
-            <input type="radio" name="group_two" value="Value 1" /><label>Value 1</label>
-            <input type="radio" name="group_two" value="Value 2" /><label>Value 2</label>
-            <input type="radio" name="group_two" value="Value 3" /><label>Value 3</label>
-          </div>
+        <div class="row">
+          <section id="radio-two" class="left">
+            <label for="group_two">Radio Buttons (Group 2):</label>
+          </section>
+          <section class="right">
+            <input type="radio" name="group_two" value="Value 1">Value 1
+            <input type="radio" name="group_two" value="Value 2">Value 2
+            <input type="radio" name="group_two" value="Value 3">Value 3
+          </section>
         </div>
 
-        <div id="checklist">
-          <div class="left">
-            <label>This is a checklist <br /> (Check all that apply):</label>
-          </div>
-          <div class="right">
-            <p>
-              <input type="checkbox" name="value 1" value="value 1" />
-              <label>Value 1</label>
-            </p>
-            <p>
-              <input type="checkbox" name="value 2" value="value 2" />
-              <label>Value 2</label>
-            </p>
-            <p>
-              <input type="checkbox" name="value 3" value="value 3" />
-              <label>Value 3</label>
-            </p>
-            <p>
-              <input type="checkbox" name="value 4" value="value 4" />
-              <label>Value 4</label>
-            </p>
-            <p>
-              <input type="checkbox" name="value 5" value="value 5" />
-              <label>Value 5</label>
-            </p>
-          </div>
+        <div class="row">
+          <section id="checklist" class="left">
+            <label id="checklist-label" for="checkbox">This is a checklist <br >(Check all that apply):</label>
+          </section>
+          <section class="right">
+            <ul>
+              <li><input type="checkbox" name="value 1" value="value 1">Value 1</li>
+              <li><input type="checkbox" name="value 2" value="value 2">Value 2</li>
+              <li><input type="checkbox" name="value 3" value="value 3">Value 3</li>
+              <li><input type="checkbox" name="value 4" value="value 4">Value 4</li>
+              <li><input type="checkbox" name="value 5" value="value 5">Value 5</li>
+            </ul>
+          </section>
         </div>
 
-        <div>
-          <div class="left">
-            <label>Comments or Suggestions?</label>
-          </div>
-          <div class="right">
-            <textarea name="comments" cols="" rows="5">Enter comments here...</textarea></p>
-          </div>
+        <div class="row">
+          <section id="comments" class="left">
+            <label id="comments-label" for="comments">Comments or Suggestions?</label>
+          </section>
+          <section class="right">
+            <textarea name="comments" cols="" rows="5">Enter comments here...</textarea>
+          </section>
         </div>
 
-        <div class="submit">
+        <br>
+        <br>
           <input type="submit" name="submit" id="submit" value="Submit" />
-        </div>
       </form>
     </main>
-    <!-- <footer>
-      <p>This is a survey form footer</p>
-    </footer>
-    -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
